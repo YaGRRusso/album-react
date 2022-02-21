@@ -1,0 +1,17 @@
+.header,
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: dodgerblue;
+  color: white;
+  padding: 30px;
+  font-weight: bold;
+}
+
+.return {
+  position: absolute;
+  left: 5%;
+  font-size: 24px;
+  cursor: pointer;
+}
