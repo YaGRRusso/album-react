@@ -1,3 +1,11 @@
+.body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .header,
 .footer {
   display: flex;
@@ -7,6 +15,7 @@
   color: white;
   padding: 50px;
   font-weight: bold;
+  width: 100%;
 }
 
 .return {

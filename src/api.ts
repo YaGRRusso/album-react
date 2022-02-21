@@ -14,7 +14,7 @@ export const api = {
       return response.data;
    },
    getPhoto: async (photoId: string) => {
-      let response = await http.get(`/photos?id=${photoId}`)
+      let response = await http.get(`/photos/${photoId}`)
       return response.data;
    },
 }

@@ -8,7 +8,7 @@ type PhotosType = {
 export function Photo({ data }: PhotosType) {
    return (
       <>
-         <Link to={`/display?id=${data.id}`}>
+         <Link to={`/display/${data.id}`}>
             <div>
                <img src={data.thumbnailUrl} alt="imagem" />
                <p>{data.title.substring(0, 15)}</p>

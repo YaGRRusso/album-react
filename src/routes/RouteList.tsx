@@ -9,6 +9,6 @@ export const RouteList = () => {
       { path: '*', element: <NotFound /> },
       { path: '/', element: <Albums /> },
       { path: '/photos/', element: <Photos /> },
-      { path: '/display/', element: <Display /> },
+      { path: '/display/:id', element: <Display /> },
    ])
 }
