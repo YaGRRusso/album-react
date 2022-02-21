@@ -11,11 +11,14 @@ function Albums() {
    }, [])
 
    async function loadAlbums() {
+      setLoading(true)
       try {
          let json = await api.getAlbums();
          setAlbums(json)
+         setLoading(false)
       } catch (error) {
          alert(error)
+         setLoading(false)
       }
    }
 

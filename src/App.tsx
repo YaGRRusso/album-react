@@ -1,15 +1,22 @@
-import { Route, Routes } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import './App.css'
-import Albums from './pages/Albums'
+import { RouteList } from './routes/RouteList'
 
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation()
+
+  function returnPage() {
+    if (location.pathname != '/') {
+      navigate(-1)
+    }
+  }
+
   return (
     <div className='body'>
-      <div className='header'><span className='return'>←</span>Album de Fotos React</div>
+      <div className='header'><span className='return' onClick={returnPage}>←</span>Album de Fotos React</div>
 
-      <Routes>
-        <Route path='/' element={<Albums />} />
-      </Routes>
+      <RouteList />
 
       <div className='footer'>Criado por Yago Russo</div>
     </div>

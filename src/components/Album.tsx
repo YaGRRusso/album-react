@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { AlbumProps } from "../types/AlbumProps"
 
 type AlbumType = {
@@ -7,7 +8,7 @@ type AlbumType = {
 export function Album({ data }: AlbumType) {
    return (
       <>
-         <div>{data.title}</div>
+         <Link to={`/photos?albumId=${data.id}`}><div>{data.title}</div></Link>
       </>
    )
 }

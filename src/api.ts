@@ -9,10 +9,14 @@ export const api = {
       let response = await http.get('/albums')
       return response.data;
    },
-   getPhotos: async () => {
-      let response = await http.get('/photos')
+   getPhotos: async (albumId: string) => {
+      let response = await http.get(`/photos?albumId=${albumId}`)
+      return response.data;
+   },
+   getPhoto: async (photoId: string) => {
+      let response = await http.get(`/photos?id=${photoId}`)
       return response.data;
    },
 }
 
-//let json = await api.getAlbums();
+//let json = await api.getAbc();
